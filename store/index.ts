@@ -25,7 +25,7 @@ export const useAppStore = create<AppState>((set) => ({
   surah: null,
   audioSrc: null,
   getEditions: async () => {
-    const response = await fetch(url + "/chapters");
+    const response = await fetch(url + "/chapters" + "?ngrok-skip-browser-warning=true");
     const data = await response.json();
     set({ editions: data });
   },
