@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect } from "react";
+import React from "react";
 import BookIcon from "@/assets/icons/book.svg";
 import LastReadIcon from "@/assets/icons/last-read.svg";
 import BisIcon from "@/assets/icons/bis.svg";

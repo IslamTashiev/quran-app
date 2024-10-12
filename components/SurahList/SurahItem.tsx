@@ -1,9 +1,7 @@
 "use client";
 import React from "react";
 import AyahMark from "./AyahMark";
-import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { useAppStore } from "@/store";
 import { ISurah } from "@/types";
 
 const SurahItem = ({ surah }: { surah: ISurah }) => {

@@ -3,7 +3,7 @@ import AyahItem from "@/components/Ayah/AyahItem";
 import { useAppStore } from "@/store";
 import { ISurah } from "@/types";
 import { useParams, useSearchParams } from "next/navigation";
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 
 const Surah = () => {
   const { setMainSurah, getSurah, surah, setAudioSrc } = useAppStore();
