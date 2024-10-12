@@ -2,7 +2,7 @@
 import { IAudioSrc, IHistory, ISurah, IVerse } from "@/types";
 import { create } from "zustand";
 
-const url = "http://192.168.0.110:5050";
+const url = "https://be77-5-59-231-7.ngrok-free.app";
 
 interface AppState {
   editions: ISurah[];
