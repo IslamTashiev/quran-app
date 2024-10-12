@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #0e6d5e;
+  --disabled: #8789a3;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+    --disabled: #9d9ead;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+.main-container {
+  border-radius: 23px;
+  padding: 24px;
+
+  background: linear-gradient(135deg, #006754 0%, #87d1a4 100%);
+  border-radius: 10px;
+  position: sticky;
+  z-index: 100;
+  top: 24px;
+}
+
+.main-container::after {
+  content: "";
+  background: linear-gradient(135deg, #006754 0%, #87d1a4 100%);
+  filter: blur(25px);
+  border-radius: 20px;
+  position: absolute;
+  width: 80%;
+  height: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 50%;
+  z-index: -1;
+}
