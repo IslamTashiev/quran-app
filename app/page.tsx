@@ -1,7 +1,7 @@
 "use client";
 import SurahList from "@/components/SurahList";
 import { useAppStore } from "@/store";
-import { useEffect } from "react";
+import { Suspense, useEffect } from "react";
 
 export default function Home() {
   const { setHistory, getEditions } = useAppStore();
@@ -11,8 +11,8 @@ export default function Home() {
     getEditions();
   }, []);
   return (
-    <div>
+    <Suspense>
       <SurahList />
-    </div>
+    </Suspense>
   );
 }

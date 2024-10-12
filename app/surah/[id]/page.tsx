@@ -3,7 +3,7 @@ import AyahItem from "@/components/Ayah/AyahItem";
 import { useAppStore } from "@/store";
 import { ISurah } from "@/types";
 import { useParams, useSearchParams } from "next/navigation";
-import React, { useEffect } from "react";
+import React, { Suspense, useEffect } from "react";
 
 const Surah = () => {
   const { setMainSurah, getSurah, surah, setAudioSrc } = useAppStore();
@@ -47,11 +47,11 @@ const Surah = () => {
   }, []);
 
   return (
-    <div>
+    <Suspense>
       {surah?.ayahs.map((ayah) => (
         <AyahItem key={ayah.verse} ayah={ayah} />
       ))}
-    </div>
+    </Suspense>
   );
 };
 

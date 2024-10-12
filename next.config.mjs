@@ -4,6 +4,9 @@ const nextConfig = {
     config.module.rules.push({
       test: /\.svg$/,
       use: ["@svgr/webpack"],
+      experimental: {
+        missingSuspenseWithCSRBailout: false,
+      },
     });
     return config;
   },
